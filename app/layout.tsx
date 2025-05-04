@@ -9,8 +9,54 @@ import { Toaster } from 'sonner';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ecommet Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  title: "Ecommet — Your Digital Partner for eCommerce, Web & App Development",
+  description:
+    "Ecommet is your trusted partner for eCommerce, web, and mobile app development. We specialize in Magento, Shopify, custom websites, and scalable digital solutions for startups and enterprises.",
+  keywords: [
+    "Magento Developer",
+    "Adobe Certified Magento Developer",
+    "Shopify Developer",
+    "Magento Expert India",
+    "Freelance Magento Developer",
+    "eCommerce development",
+    "Magento module development",
+    "Shopify app development",
+    "custom web development",
+    "API integration services",
+    "multi-vendor marketplace setup",
+    "Ecommet freelancing services",
+    "full-stack web solutions",
+    "Web development",
+    "mobile app development",
+  ],
+  authors: [{ name: "Akash Sahani" }],
+  creator: "Akash Sahani",
+  publisher: "Akash Sahani",
+  openGraph: {
+    title: "Ecommet — Your Digital Partner for eCommerce, Web & App Development",
+    description:
+      "Explore my work and services as a Magento expert delivering scalable, fast e-commerce experiences.",
+    url: "https://ecommet.in",
+    siteName: "Ecommet Solutions",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 500,
+        height: 500,
+        alt: "Ecommet Solutions",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ecommet — eCommerce, Web & App Development Solutions",
+    description:
+      "Get scalable and tailored development services for Magento, Shopify, web, and mobile apps. Crafted with performance and innovation.",
+    creator: "@itsakashsahani",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
