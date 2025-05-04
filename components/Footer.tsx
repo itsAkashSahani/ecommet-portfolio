@@ -1,4 +1,3 @@
-import { socialMedia } from "@/data";
 import ContactForm from "./ContactForm";
 
 const Footer = () => {

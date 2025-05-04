@@ -68,7 +68,7 @@ export default function ContactForm() {
       className="max-w-3xl mx-auto p-6 bg-white dark:bg-black-100 rounded-xl shadow-lg"
     >
       <h2 className="text-2xl font-bold text-center mb-6 text-black dark:text-white">
-        Let's Connect
+        Let&apos;s Connect
       </h2>
 
       <Form {...form}>

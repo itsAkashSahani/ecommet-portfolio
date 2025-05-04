@@ -1,4 +1,4 @@
-import { FaBook, FaCode, FaDownload, FaHireAHelper, FaLocationArrow } from "react-icons/fa6";
+import { FaCode, FaDownload } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";

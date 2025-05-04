@@ -7,7 +7,7 @@ function RecentProjects() {
     {
       title: "Liskart — Genuine Automotive Spare Parts Marketplace",
       button: "Visit Website",
-      url: "https://www.yves-rocher.com.sa/",
+      url: "https://liskart.com/",
       src: "/projects/liskart.png",
     },
     {
@@ -19,27 +19,31 @@ function RecentProjects() {
     {
       title: "Gecko Jewellery — Luxury Ecommerce",
       button: "Visit Website",
+      url: "https://geckojewellery.com/",
       src: "/projects/gecko.png",
     },
     {
       title: "Accuride North Amarica — B2B Automotive Platform",
       button: "Visit Website",
+      url: "https://www.accuride.com/",
       src: "/projects/accuride-na.png",
     },
     {
       title: "Spaces.in — Home Decor Platform",
       button: "Visit Website",
-      url: "https://www.yves-rocher.com.sa/",
+      url: "https://spaces.in/",
       src: "/projects/spaces.png",
     },
     {
       title: "Accuride Europe — B2B Automotive Platform",
       button: "Visit Website",
+      url: "https://www.accuride-europe.com/en/",
       src: "/projects/accuride-eu.png",
     },
     {
       title: "Allflex Global — Livestock Identification Services",
       button: "Visit Website",
+      url: "https://www.allflex.global/",
       src: "/projects/allflex.png",
     },
   ];

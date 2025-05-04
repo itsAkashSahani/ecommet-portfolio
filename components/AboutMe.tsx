@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 import { motion } from "motion/react"
 
 const AboutMe = () => {
@@ -21,7 +21,13 @@ const AboutMe = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <img src="/about.png" alt="About Me" className="rounded-xl shadow-lg" />
+            <Image
+              src="/about.png"
+              alt="About Me"
+              className="rounded-xl shadow-lg"
+              width={500}
+              height={500}
+            />
           </motion.div>
 
           {/* Right Column – Text Block with Animated Border */}
@@ -42,7 +48,7 @@ const AboutMe = () => {
                 launch faster, perform better, and scale smarter. Every line of code I write is focused on real results:
                 <strong> performance, conversions, and growth</strong>.
                 <br /><br />
-                If you&apos;re looking for someone who understands both the <strong>tech</strong> and the <strong>business of eCommerce</strong> — you're in the right place.
+                If you&apos;re looking for someone who understands both the <strong>tech</strong> and the <strong>business of eCommerce</strong> — you&apos;re in the right place.
               </p>
             </div>
           </motion.div>
