@@ -166,6 +166,11 @@ export default function ContactForm() {
           </Button>
         </form>
       </Form>
+      <div className="mt-8 text-sm text-gray-600 dark:text-gray-400 space-y-4">
+        <p className="text-center">
+          Contact us for any inquiries or to discuss your project. We look forward to hearing from you!
+        </p>
+      </div>
     </motion.div>
   );
 }
