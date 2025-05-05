@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
@@ -10,24 +10,11 @@ export const TextGenerateEffect = ({
   words: string;
   className?: string;
 }) => {
-  const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
-  useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
-      },
-      {
-        duration: 2,
-        delay: stagger(0.2),
-      }
-    );
-  }, [animate]);
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <motion.div>
         {wordsArray.map((word, idx) => {
           return (
             <React.Fragment key={word + idx}>
@@ -35,7 +22,7 @@ export const TextGenerateEffect = ({
                 // change here if idx is greater than 3, change the text color to #CBACF9
                 className={` ${
                   idx > 3 ? "text-purple" : "dark:text-white text-black"
-                } opacity-0`}
+                }`}
               >
                 {word}{" "}
               </motion.span>
