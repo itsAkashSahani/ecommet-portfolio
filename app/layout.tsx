@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   title: "Ecommet — Your Digital Partner for eCommerce, Web & App Development",
   description:
     "Ecommet is your trusted partner for eCommerce, web, and mobile app development. We specialize in Magento, Shopify, custom websites, and scalable digital solutions for startups and enterprises.",
-  authors: [{ name: "Akash Sahani" }],
-  creator: "Akash Sahani",
-  publisher: "Akash Sahani",
+  authors: [{ name: "Ecommet Solutions" }],
+  creator: "Ecommet Solutions",
+  publisher: "Ecommet Solutions",
   metadataBase: new URL("https://ecommet.in"),
   openGraph: {
     title:
       "Ecommet — Your Digital Partner for eCommerce, Web & App Development",
     description:
-      "Explore my work and services as a Magento expert delivering scalable, fast e-commerce experiences.",
+      "Ecommet is your trusted partner for eCommerce, web, and mobile app development. We specialize in Magento, Shopify, custom websites, and scalable digital solutions for startups and enterprises.",
     url: "https://ecommet.in",
     siteName: "Ecommet Solutions",
     images: [
@@ -45,15 +45,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
@@ -89,68 +80,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "CollectionPage",
-                  "@id": "https://www.ecommet.in/",
-                  url: "https://www.ecommet.in/",
-                  name: "Ecommet — Your Digital Partner for eCommerce, Web & App Development",
-                  isPartOf: {
-                    "@id": "https://www.ecommet.in/#website",
-                  },
-                  about: {
-                    "@id": "https://www.ecommet.in/#organization",
-                  },
-                  description:
-                    "Ecommet is your trusted partner for eCommerce, web, and mobile app development. We specialize in Magento, Shopify, custom websites, and scalable digital solutions for startups and enterprises.",
-                  breadcrumb: {
-                    "@id": "https://www.ecommet.in/#breadcrumb",
-                  },
-                  inLanguage: "en-US",
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://www.ecommet.in/#breadcrumb",
-                  itemListElement: [
-                    {
-                      "@type": "ListItem",
-                      position: 1,
-                      name: "Home",
-                    },
-                  ],
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://www.ecommet.in/#website",
-                  url: "https://www.ecommet.in/",
-                  name: "Ecommet Solutions",
-                  description:
-                    "Get scalable and tailored development services for Magento, Shopify, web, and mobile apps. Crafted with performance and innovation.",
-                  publisher: {
-                    "@id": "https://www.ecommet.in/#organization",
-                  },
-                  inLanguage: "en-US",
-                },
-                {
-                  "@type": "Organization",
-                  "@id": "https://www.ecommet.in/#organization",
-                  name: "Ecommet Solutions",
-                  url: "https://www.ecommet.in/",
-                  logo: {
-                    "@type": "ImageObject",
-                    inLanguage: "en-US",
-                    "@id": "https://www.ecommet.in/#/schema/logo/image/",
-                    url: "https://www.ecommet.in/og-image.png",
-                    contentUrl: "https://www.ecommet.in/og-image.png",
-                    width: 380,
-                    height: 380,
-                    caption: "Ecommet Solutions",
-                  },
-                  image: {
-                    "@id": "https://www.ecommet.in/#/schema/logo/image/",
-                  },
-                },
-              ],
+              "@type": "WebSite",
+              "@id": "https://www.ecommet.in/",
+              url: "https://www.ecommet.in/",
+              name: "Ecommet Solutions",
+              description:
+                "Get scalable and tailored development services for Magento, Shopify, web, and mobile apps. Crafted with performance and innovation.",
+              image: "https://www.ecommet.in/og-image.png",
+              inLanguage: "en-US",
             }),
           }}
         />
