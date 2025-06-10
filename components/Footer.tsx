@@ -1,57 +1,52 @@
-import ContactForm from "./ContactForm";
-import { FiMail, FiPhone } from "react-icons/fi";
+import { FaFacebookSquare, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="w-full py-10" id="contact">
-      <section className="flex flex-col items-center">
-        <h2 className="heading">
-          Let&apos;s Build Something Great Together
-        </h2>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Have a project in mind or just want to say hello? I&apos;d love to hear from you.
-        </p>
-      </section>
-
-      <ContactForm />
-
-      {/* Removing this section for now */}
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-4 text-gray-600 dark:text-gray-400 text-sm md:text-base">
-        <p className="flex items-center gap-2 text-center">
-          Copyright © 2025 Akash Sahani. All rights reserved.
-        </p>
-
-        <div className="flex flex-col md:flex-row items-center gap-2">
-          <div className="flex items-center gap-2">
-            <FiMail />
-            <a href="mailto:ecommet.solutions@gmail.com" className="hover:underline">
-              ecommet.solutions@gmail.com
-            </a>
-          </div>
-
-          <div className="hidden md:block mx-2">|</div>
-
-          <div className="flex items-center gap-2">
-            <FiPhone />
-            <a href="tel:+919137690039" className="hover:underline">
-              +91 91376 90039
-            </a>
-          </div>
+    <footer className="bg-gray-900 text-gray-300 py-8 px-4 w-full">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Logo + Description */}
+        <div>
+          <h2 className="text-2xl font-bold text-white">Ecommet</h2>
+          <p className="mt-3 text-sm text-gray-400">
+            Your growth partner for high-performance eCommerce, custom web platforms, and app development.
+          </p>
         </div>
 
-        {/* <div className="flex items-center md:gap-3 gap-6 md:py-5">
-          {socialMedia.map((info) => (
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
-          ))}
-        </div> */}
+        {/* Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Company</h3>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+            <li><Link href="/services" className="hover:text-white">Services</Link></li>
+            <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+            <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Resources</h3>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+            <li><Link href="/terms" className="hover:text-white">Terms & Conditions</Link></li>
+            <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+          </ul>
+        </div>
+
+        {/* Social */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Follow Us</h3>
+          <div className="flex gap-4">
+            <Link href="https://facebook.com" target="_blank" className="hover:text-white"><FaFacebookSquare size={20} /></Link>
+            <Link href="https://linkedin.com" target="_blank" className="hover:text-white"><FaLinkedin size={20} /></Link>
+            <Link href="https://instagram.com" target="_blank" className="hover:text-white"><FaInstagram size={20} /></Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-500 text-center">
+        © {new Date().getFullYear()} Ecommet Solutions. All rights reserved.
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

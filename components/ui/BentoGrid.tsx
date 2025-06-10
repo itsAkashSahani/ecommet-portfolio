@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 export const BentoGrid = ({
   className,
@@ -11,8 +11,8 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-8xl grid-cols-1 gap-6 md:auto-rows-[20rem] md:grid-cols-3",
-        className,
+        "mx-auto grid max-w-8xl grid-cols-2 gap-4 md:auto-rows-[20rem] md:grid-cols-3 md:gap-8",
+        className
       )}
     >
       {children}
@@ -28,13 +28,18 @@ const itemVariants = {
     transition: {
       delay: i * 0.15, // stagger each item
       duration: 0.5,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   }),
 };
 
 export const BentoGridItem = ({
-  title, description, header, icon, className, index
+  title,
+  description,
+  header,
+  icon,
+  className,
+  index,
 }: {
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
@@ -51,17 +56,17 @@ export const BentoGridItem = ({
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-transparent dark:shadow-none",
-        className,
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 p-2 transition duration-200 hover:shadow-xl border-white/[0.2] bg-transparent shadow-none",
+        className
       )}
     >
       {header}
       <div>
         {icon}
-        <div className="mt-2 mb-2 font-sans font-bold text-white dark:text-neutral-200">
+        <div className="mt-2 mb-2 font-sans font-bol text-neutral-200">
           {title}
         </div>
-        <div className="font-sans text-xs font-normal text-white dark:text-neutral-300">
+        <div className="font-sans text-xs font-norma text-neutral-300">
           {description}
         </div>
       </div>

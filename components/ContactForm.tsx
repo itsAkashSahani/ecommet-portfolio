@@ -48,124 +48,126 @@ export default function ContactForm() {
     });
 
     console.log("Response from server:", response);
-  
+
     const result = await response.json();
-    
+
     if (result?.success) {
       toast.success("Application Submitted Successfully.");
       form.reset();
     } else {
-      toast.error("Failed To send application. Please try again or contact us directly.");
+      toast.error(
+        "Failed To send application. Please try again or contact us directly."
+      );
     }
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="max-w-3xl mx-auto p-6 bg-white dark:bg-black-100 rounded-xl shadow-lg"
-    >
-      <h2 className="text-2xl font-bold text-center mb-6 text-black dark:text-white">
-        Let&apos;s Connect
-      </h2>
+    <section className="relative sm:p-10 px-6 py-10 w-full" id="projects">
+      <div className="absolute inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] z-[-10]"></div>
 
-      <Form {...form}>
-        <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
-          <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-white">
-              Name
-            </label>
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="John Doe"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-lg"
+      >
+        <h2 className="text-2xl font-bold text-center mb-6 text-black">
+          Let&apos;s Connect
+        </h2>
 
-          <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-white">
-              Email
-            </label>
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="john@example.com"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+        <Form {...form}>
+          <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
+            <div>
+              <label className="block mb-1 text-sm font-medium text-gray-700">
+                Name
+              </label>
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input placeholder="John Doe" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
 
-          <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-white">
-              Mobile Number
-            </label>
-            <FormField
-              control={form.control}
-              name="mobile_number"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="Enter your mobile number"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+            <div>
+              <label className="block mb-1 text-sm font-medium text-gray-700">
+                Email
+              </label>
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input placeholder="john@example.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
 
-          <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-white">
-              Message
-            </label>
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Textarea
-                      {...field}
-                      placeholder="Type your message here..."
-                      rows={4}
-                      maxLength={500}
-                      minLength={10}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+            <div>
+              <label className="block mb-1 text-sm font-medium text-gray-700">
+                Mobile Number
+              </label>
+              <FormField
+                control={form.control}
+                name="mobile_number"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        placeholder="Enter your mobile number"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
 
-          <Button className="w-full bg-black dark:bg-white text-white dark:text-black font-semibold py-3 rounded-lg hover:opacity-90 transition" 
-            disabled={isLoading}>
-              {isLoading ? 'Sending.....' : 'Send Message'}
-          </Button>
-        </form>
-      </Form>
-    </motion.div>
+            <div>
+              <label className="block mb-1 text-sm font-medium text-gray-700">
+                Message
+              </label>
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Textarea
+                        {...field}
+                        placeholder="Type your message here..."
+                        rows={4}
+                        maxLength={500}
+                        minLength={10}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <Button
+              className="w-full bg-black text-white font-semibold py-3 rounded-lg hover:opacity-90 transition"
+              disabled={isLoading}
+            >
+              {isLoading ? "Sending....." : "Send Message"}
+            </Button>
+          </form>
+        </Form>
+      </motion.div>
+    </section>
   );
 }

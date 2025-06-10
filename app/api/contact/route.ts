@@ -11,8 +11,6 @@ export async function POST(
   try {
     const values = await req.json();
 
-    console.log("Received values:", values);
-    
     const [adminHtml, customerHtml] = await Promise.all([
       prepareAdminEmailTemplate(values),
       prepareACustomerEmailTemplate(values),

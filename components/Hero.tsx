@@ -1,4 +1,4 @@
-import { FaCode, FaDownload } from "react-icons/fa6";
+import { FaCode, FaFolder } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
-    <section className="w-full pb-20 pt-28">
+    <section className="w-full py-44">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -29,18 +29,25 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Where eCommerce Meets Momentum
-          </p>
           <TextGenerateEffect
-            words="Hey There!, I am Akash Sahani"
-            className="text-center text-[50px] md:text-5xl lg:text-8xl"
+            words={[
+              {
+                text: "Supercharge",
+                highlight: true,
+                className: "lg:text-[100px] md:text-[60px] text-[50px]",
+              },
+              { text: "Your eCommerce." },
+              { text: "Without Limits." },
+            ]}
+            className="text-center text-[40px] md:text-5xl lg:text-7xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Certified Magento Expert & Full-Stack Developer
+          <p className="text-center md:tracking-wider m-4 text-sm md:text-lg lg:text-xl text-white">
+            Ecommet is your growth partner for high-performance eCommerce,
+            custom web platforms, and app development - tailored for startups,
+            scaleups, and enterprise.
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 mt-8">
@@ -48,16 +55,16 @@ const Hero = () => {
               <MagicButton
                 title="Start a Project"
                 icon={<FaCode />}
-                position="right"
-                otherClasses="bg-white !text-black text-bold"
+                position="left"
+                otherClasses="bg-white hover:bg-neutral-200 !text-black text-bold"
               />
             </a>
 
-            <a href="/files/Akash-Sahani-Resume.pdf" download="Akash-Sahani-Resume.pdf">
+            <a href="#">
               <MagicButton
-                title="Download Resume"
-                icon={<FaDownload />}
-                position="right"
+                title="View Our Work"
+                icon={<FaFolder />}
+                position="left"
               />
             </a>
           </div>
