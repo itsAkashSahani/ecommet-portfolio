@@ -9,7 +9,7 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ecommet — Your Digital Partner for eCommerce, Web & App Development",
+  title: "Ecommet : Your Growth Partner in eCommerce, Web & App Development",
   description:
     "Ecommet is your trusted partner for eCommerce, web, and mobile app development. We specialize in Magento, Shopify, custom websites, and scalable digital solutions for startups and enterprises.",
   authors: [{ name: "Ecommet Solutions" }],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ecommet.in"),
   openGraph: {
     title:
-      "Ecommet — Your Digital Partner for eCommerce, Web & App Development",
+      "Ecommet : Your Growth Partner in eCommerce, Web & App Development",
     description:
       "Ecommet is your trusted partner for eCommerce, web, and mobile app development. We specialize in Magento, Shopify, custom websites, and scalable digital solutions for startups and enterprises.",
     url: "https://ecommet.in",
