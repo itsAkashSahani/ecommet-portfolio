@@ -57,15 +57,15 @@ function RecentProjects() {
       <header className="heading mb-2">
         <span className="text-gray-900">Our Orbit of Impactful Projects</span>
       </header>
-      <div className="relative max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-auto py-12 px-5">
-        <div className="absolute top-0 right-0 z-10 text-gray-900 hidden md:block">
+      <div className="relative max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-auto py-14 px-5">
+        <div className="absolute top-0 right-6 z-10 hidden md:block">
           <a
             href="#"
-            className="inline-block px-6 py-3 hover:underline"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition"
             title="View All Projects"
           >
             View All Projects
-            <ArrowRight className="inline-block ml-2 h-4 w-4" />
+            <ArrowRight className="h-4 w-4" />
           </a>
         </div>
 
@@ -82,11 +82,11 @@ function RecentProjects() {
       <div className="text-center mt-2 md:hidden">
         <a
           href="#"
-          className="inline-block px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+          className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
           title="View All Projects"
         >
           View All Projects
-          <ArrowRight className="inline-block ml-2 h-4 w-4" />
+          <ArrowRight className="h-4 w-4" />
         </a>
       </div>
     </section>

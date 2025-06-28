@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import Navbar from "@/components/Navbar";
 import WhyUs from "@/components/WhyUs";
 import Footer from "@/components/Footer";
+import MagentoExtensionsCarousel from "@/components/MagentoExtensionsCarousel";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <main className="relative flex justify-center items-center flex-col overflow-clip mx-auto">
         <Hero />
         <AboutMe />
+        <MagentoExtensionsCarousel />
         <Services />
         <RecentProjects />
         <WhyUs />

@@ -12,7 +12,6 @@ import {
   FileText,
   Phone,
   Info,
-  UserPlus,
   Code,
 } from "lucide-react";
 
@@ -33,17 +32,19 @@ const Navbar = () => {
               label="Services"
               icon={<Layers size={16} />}
               items={[
-                "Magento Solutions",
-                "Custom Websites",
-                "Web & Mobile Apps",
-                "Business Software",
-                "Maintenance & Support",
+                { label: "Ecommerce Solutions", href: "/ecommerce-solutions" },
+                { label: "Web & Mobile Apps", href: "/web-mobile-apps" },
+                { label: "Business Software", href: "/business-software" },
               ]}
             />
             <Dropdown
               label="Products"
               icon={<Package size={16} />}
-              items={["Magento Extensions", "Shopify Apps", "Saas Products"]}
+              items={[
+                { label: "Magento Extensions", href: "/magento-extensions" },
+                { label: "Shopify Apps", href: "/shopify-apps" },
+                { label: "Saas Products", href: "/saas-products" },
+              ]}
             />
             <NavLink
               href="#"
@@ -52,11 +53,6 @@ const Navbar = () => {
             />
             <NavLink href="#" label="Blog" icon={<FileText size={16} />} />
             <NavLink href="#" label="About Us" icon={<Info size={16} />} />
-            <NavLink
-              href="#"
-              label="Get a Quote"
-              icon={<UserPlus size={16} />}
-            />
             <NavLink href="#" label="Contact" icon={<Phone size={16} />} />
           </div>
 
@@ -94,21 +90,22 @@ const Navbar = () => {
           <MobileDropdown
             label="Services"
             items={[
-              "Magento Solutions",
-              "Custom Websites",
-              "Web & Mobile Apps",
-              "Business Software",
-              "Maintenance & Support",
+              { label: "Ecommerce Solutions", href: "/ecommerce-solutions" },
+              { label: "Web & Mobile Apps", href: "/web-mobile-apps" },
+              { label: "Business Software", href: "/business-software" },
             ]}
           />
           <MobileDropdown
             label="Products"
-            items={["Magento Extensions", "Shopify Apps", "Saas Products"]}
+            items={[
+              { label: "Magento Extensions", href: "/magento-extensions" },
+              { label: "Shopify Apps", href: "/shopify-apps" },
+              { label: "Saas Products", href: "/saas-products" },
+            ]}
           />
-          <MobileLink label="Portfolio / Projects" />
+          <MobileLink label="Portfolio" />
           <MobileLink label="Blog" />
           <MobileLink label="About Us" />
-          <MobileLink label="Hire Us / Get a Quote" />
           <MobileLink label="Contact" />
         </div>
       )}
@@ -132,10 +129,15 @@ const NavLink: React.FC<NavLinkProps> = ({ href, label, icon }) => (
   </Link>
 );
 
+type DropdownItem = {
+  label: string;
+  href: string;
+};
+
 type DropdownProps = {
   label: string;
   icon?: ReactNode;
-  items: string[];
+  items: DropdownItem[];
 };
 
 const Dropdown: React.FC<DropdownProps> = ({ label, items, icon }) => (
@@ -147,8 +149,12 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items, icon }) => (
     </div>
     <div className="absolute left-0 top-full w-60 mt-1 rounded-md bg-white shadow-lg z-50 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 pointer-events-auto">
       {items.map((item, idx) => (
-        <Link key={idx} href="#" className="block px-4 py-2 hover:bg-gray-100">
-          {item}
+        <Link
+          key={idx}
+          href={item.href}
+          className="block px-4 py-2 hover:bg-gray-100"
+        >
+          {item.label}
         </Link>
       ))}
     </div>
@@ -180,10 +186,10 @@ const MobileDropdown: React.FC<DropdownProps> = ({ label, items }) => {
           {items.map((item, idx) => (
             <Link
               key={idx}
-              href="#"
+              href={item.href}
               className="block py-2 px-2 hover:bg-gray-100 rounded"
             >
-              {item}
+              {item.label}
             </Link>
           ))}
         </div>
