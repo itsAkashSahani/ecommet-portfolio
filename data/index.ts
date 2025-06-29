@@ -237,3 +237,61 @@ export const socialMedia = [
     img: "/link.svg",
   },
 ];
+
+export const magentoExtensions = [
+  {
+    id: 1,
+    name: "MageAsk AI Powered Admin Assistant",
+    image: "/magento-extensions/mageask-logo-full.png",
+    price: 99,
+    discountedPrice: 79,
+    shortDescription:
+      "MageAsk seamlessly integrates OpenAI with your Magento admin, letting you query store data in plain language - no SQL needed. Instantly get answers in structured tables and make data-driven decisions faster.",
+    rating: 5.0,
+  },
+  {
+    id: 2,
+    name: "Customer Group Payment Restriction",
+    image: "/magento-extensions/payment-restriction.png",
+    price: 59,
+    shortDescription:
+      "Control payment method visibility by customer group with this extension. Easily configure which payment options are available for each group",
+    rating: 4.8,
+  },
+  {
+    id: 3,
+    name: "Customer Product Inquiries",
+    image: "/magento-extensions/product_enquiry_full.png",
+    price: 49,
+    shortDescription:
+      "Empower customers to ask and answer product-specific questions directly on the product page. This extension enhances customer engagement and builds community trust.",
+    rating: 4.5,
+  },
+  {
+    id: 4,
+    name: "Smart Delivery Date",
+    image: "/magento-extensions/smart-delivery-date_full.png",
+    price: 49,
+    shortDescription:
+      "This module dynamically calculates estimated delivery dates based on your store's working days, holidays, and processing times, giving customers clear and accurate delivery information to enhance their shopping experience.",
+    rating: 4.8,
+  },
+  {
+    id: 5,
+    name: "Customer KYC Document Upload",
+    image: "/magento-extensions/customer_document_upload_full.png",
+    price: 0,
+    shortDescription:
+      "Collect and verify customer identity documents during checkout with the Customer KYC Document Upload module. Customers can upload their ID, type, and number in a secure checkout step, with data stored alongside the order for easy admin access.",
+    rating: 4.6,
+  },
+  {
+    id: 6,
+    name: "Ingredient Glossary",
+    image: "/magento-extensions/ingredient-glossary.png",
+    price: 119,
+    shortDescription:
+      "A powerful Magento extension that helps merchants manage, organize, and display detailed ingredient information on product pages. Easily assign ingredients with allergen labels like gluten, peanut, or lactic, and provide customers with clear descriptions on hover, building trust and improving product transparency.",
+    rating: 5.0,
+  },
+];

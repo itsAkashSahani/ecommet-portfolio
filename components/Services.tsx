@@ -42,8 +42,7 @@ const items = [
         <Image
           src="/services/magento_module.png"
           alt="Custom Magento Module Development"
-          fill={true}
-          sizes="100vw"
+          fill
           className="object-contain rounded-xl"
         />
       </div>

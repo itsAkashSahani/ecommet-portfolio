@@ -8,7 +8,6 @@ import {
   ChevronDown,
   Layers,
   Package,
-  Briefcase,
   FileText,
   Phone,
   Info,
@@ -41,24 +40,24 @@ const Navbar = () => {
               label="Products"
               icon={<Package size={16} />}
               items={[
-                { label: "Magento Extensions", href: "/magento-extensions" },
-                { label: "Shopify Apps", href: "/shopify-apps" },
-                { label: "Saas Products", href: "/saas-products" },
+                { label: "Magento Extensions", href: "/magento-extension-store" },
+                // { label: "Shopify Apps", href: "/shopify-apps" },
+                // { label: "Saas Products", href: "/saas-products" },
               ]}
             />
-            <NavLink
+            {/* <NavLink
               href="#"
               label="Portfolio"
               icon={<Briefcase size={16} />}
-            />
+            /> */}
             <NavLink href="#" label="Blog" icon={<FileText size={16} />} />
-            <NavLink href="#" label="About Us" icon={<Info size={16} />} />
-            <NavLink href="#" label="Contact" icon={<Phone size={16} />} />
+            <NavLink href="/about-us" label="About Us" icon={<Info size={16} />} />
+            <NavLink href="/contact-us" label="Contact" icon={<Phone size={16} />} />
           </div>
 
           <div className="inline-flex justify-between items-center gap-2">
             <div>
-              <a href="#contact">
+              <a href="/contact-us">
                 <button
                   className="inline-flex overflow-hidden focus:outline-none items-center justify-center rounded-lg
              bg-[#2563EB] hover:bg-blue-800 px-4 py-2 text-sm font-medium text-white backdrop-blur-3xl gap-2"
@@ -86,7 +85,7 @@ const Navbar = () => {
             mobileOpen ? "block" : "hidden"
           }`}
         >
-          <MobileLink label="Home" />
+          <MobileLink href="/" label="Home" />
           <MobileDropdown
             label="Services"
             items={[
@@ -99,14 +98,14 @@ const Navbar = () => {
             label="Products"
             items={[
               { label: "Magento Extensions", href: "/magento-extensions" },
-              { label: "Shopify Apps", href: "/shopify-apps" },
-              { label: "Saas Products", href: "/saas-products" },
+              // { label: "Shopify Apps", href: "/shopify-apps" },
+              // { label: "Saas Products", href: "/saas-products" },
             ]}
           />
-          <MobileLink label="Portfolio" />
-          <MobileLink label="Blog" />
-          <MobileLink label="About Us" />
-          <MobileLink label="Contact" />
+          {/* <MobileLink label="Portfolio" /> */}
+          <MobileLink href="#" label="Blog" />
+          <MobileLink href="/about-us" label="About Us" />
+          <MobileLink href="/contact-us" label="Contact" />
         </div>
       )}
     </nav>
@@ -161,8 +160,8 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items, icon }) => (
   </div>
 );
 
-const MobileLink: React.FC<{ label: string }> = ({ label }) => (
-  <Link href="#" className="block py-2 px-2 hover:bg-gray-100 rounded">
+const MobileLink: React.FC<{ label: string, href: string }> = ({ label, href }) => (
+  <Link href={href} className="block py-2 px-2 hover:bg-gray-100 rounded">
     {label}
   </Link>
 );

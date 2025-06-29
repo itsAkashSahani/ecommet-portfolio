@@ -51,7 +51,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 mt-8">
-            <a href="#contact">
+            <a href="/contact-us">
               <MagicButton
                 title="Start a Project"
                 icon={<FaCode />}
@@ -60,9 +60,9 @@ const Hero = () => {
               />
             </a>
 
-            <a href="#">
+            <a href="/magento-extension-store">
               <MagicButton
-                title="View Our Work"
+                title="View Our Extensions"
                 icon={<FaFolder />}
                 position="left"
               />

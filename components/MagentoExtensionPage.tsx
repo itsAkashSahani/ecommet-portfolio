@@ -1,45 +1,30 @@
 import React from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import { ArrowRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { magentoExtensions } from "@/data";
 
-const MagentoExtensionsCarousel = () => {
+const MagentoExtensionPage = () => {
   return (
-    <section className="sm:p-10 px-6 py-10 w-full bg-gray-50">
-      <header className="heading mb-2">
-        <span className="text-gray-900">Our Magento Extensions</span>
-      </header>
-      <div className="relative max-w-7xl mx-auto px-0 sm:px-0 py-14 mt-6">
-        <div className="absolute top-0 right-6 z-10 hidden md:block">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition"
-            title="View All Extensions"
-          >
-            View All Extensions
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
+    <section
+      className="relative sm:p-10 px-6 py-10 w-full"
+      id="web-mobile-apps"
+    >
+      <div className="absolute inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] z-[-10]"></div>
 
-        <Swiper
-          spaceBetween={32}
-          slidesPerView={1.2}
-          breakpoints={{
-            640: { slidesPerView: 1.2 },
-            768: { slidesPerView: 2.3 },
-            1024: { slidesPerView: 3.5 },
-          }}
-          navigation
-          modules={[Navigation]}
-          className="w-full items-stretch"
-        >
-          {magentoExtensions.slice(0, 6).map((product) => (
-            <SwiperSlide className="!h-auto flex" key={product.id}>
-              <div className="bg-white border rounded-xl shadow hover:shadow-lg transition flex flex-col w-full h-full p-4">
+      <header className="text-center mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+          Magento Extensions Store
+        </h1>
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+          Explore our collection of Magento extensions designed to enhance your
+          eCommerce store&apos;s functionality. From payment gateways to shipping
+          solutions, find the perfect tools to optimize your Magento experience.
+        </p>
+      </header>
+
+      <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
+          {magentoExtensions.map((product) => (
+            <div className="bg-white border rounded-xl shadow hover:shadow-lg transition flex flex-col w-full h-full p-4" key={product.id}>
                 <div className="relative">
                   <Image
                     src={product.image}
@@ -103,23 +88,11 @@ const MagentoExtensionsCarousel = () => {
                   </a>
                 </div>
               </div>
-            </SwiperSlide>
           ))}
-        </Swiper>
-
-        <div className="text-center mt-6 md:hidden">
-          <a
-            href="/magento-extension-store"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
-            title="View All Extensions"
-          >
-            View All Extensions
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
       </div>
+
     </section>
   );
 };
 
-export default MagentoExtensionsCarousel;
+export default MagentoExtensionPage;

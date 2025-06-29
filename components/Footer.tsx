@@ -17,10 +17,10 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Company</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-white">Services</Link></li>
-            <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-            <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+            <li><Link href="/about-us" className="hover:text-white">About Us</Link></li>
+            <li><Link href="/ecommerce-solutions" className="hover:text-white">Services</Link></li>
+            <li><Link href="/contact-us" className="hover:text-white">Contact</Link></li>
+            {/* <li><Link href="/careers" className="hover:text-white">Careers</Link></li> */}
           </ul>
         </div>
 
@@ -28,7 +28,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-3">Resources</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-            <li><Link href="/terms" className="hover:text-white">Terms & Conditions</Link></li>
+            {/* <li><Link href="/terms" className="hover:text-white">Terms & Conditions</Link></li> */}
             <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
           </ul>
         </div>
